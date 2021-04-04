@@ -7,11 +7,11 @@ class WeatherController < ApplicationController
   end
 
   def find_aqi_zip(zip)
-    request_api("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=#{(zipcode)}&distance=25&API_KEY=#{(aqi_api_key)}")
+    request_api("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=#{(zip)}&distance=25&API_KEY=#{(aqi_api_key)}")
   end
 
   def find_weather_zip(zip)
-    request_api("https://api.openweathermap.org/data/2.5/forecast?zip=#{(zip_string)},us&appid=#{(weather_api_key)}")
+    request_api("https://api.openweathermap.org/data/2.5/forecast?zip=#{(zip)},us&appid=#{(weather_api_key)}")
   end
 
   def request_aqi_api(url)
