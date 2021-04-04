@@ -15,6 +15,3 @@ ActiveStorage.start()
 //= require materialize
 //= require jquery
 //= require materialize-sprockets
-
-$('#zipcode1').val('New Text');
-M.textareaAutoResize($('#zipcode1'));
